@@ -1,12 +1,12 @@
 $(document).ready(function() {
 //for otp request
-    $('#Dsend').click(function () {
+    $('#Psend').click(function () {
 
 
         //-----------------testing---------------------
         $('.basic').hide();
-        $('#Dsend').hide();
-        $('#D_loginButton').hide();
+        $('#Psend').hide();
+        $('#P_loginButton').hide();
         //$('#change').show();
         $('#pass').show();
         $('#number').attr('disabled', 'disabled');
@@ -25,7 +25,7 @@ $(document).ready(function() {
 
         $.ajax(
             {
-                url: "/DoctorsendOTP",
+                url: "/PharmacistsendOTP",
                 method: 'POST',
                 data: JSON.stringify(data),
                 contentType: 'application/json',
@@ -35,8 +35,8 @@ $(document).ready(function() {
                         Materialize.toast(result.message, 2000);
 
                         $('.basic').hide();
-                        $('#Dsend').hide();
-                        $('#D_loginButton').hide();
+                        $('#Psend').hide();
+                        $('#P_loginButton').hide();
                         //$('#change').show();
                         $('#pass').show();
                         $('#number').attr('disabled', 'disabled');
@@ -59,7 +59,7 @@ $(document).ready(function() {
 
     });
 
-    $('#Dverify').click(function () {
+    $('#Pverify').click(function () {
         var otp = $('#otp').val();
 
         var data = {
@@ -95,7 +95,7 @@ $(document).ready(function() {
     });
 
 
-    $('#DsubmitButton').click(function () {
+    $('#PsubmitButton').click(function () {
 
         var name = $('#name').val();
         var email = $('#email').val();
@@ -113,7 +113,7 @@ $(document).ready(function() {
 
         $.ajax(
             {
-                url: "/doctorregister",
+                url: "/pharmacistregister",
                 method: 'POST',
                 data: JSON.stringify(data),
                 contentType: 'application/json',
@@ -140,8 +140,8 @@ $(document).ready(function() {
 
 
 //for login
-
-/*    $('#DloginButton1').click(function () {
+/*
+    $('#PloginButton1').click(function () {
 
         // $('#preloader').show();
 
@@ -300,6 +300,6 @@ $(document).ready(function() {
             }
         )
     });
-*/
 
+*/
 });

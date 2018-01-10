@@ -14,14 +14,14 @@ div.row.black-text.register#register
         //span(style={position: "absolute", right: "0"}).badge.btn.right#send Send OTP
     div.row.center
         //if(data=='UserRegister')
-        a.waves-effect.waves-purple.btn.hoverable.mediumpurple.buttu.user(title="click to recieve OTP")#send UContinue
+        a.waves-effect.waves-purple.btn.hoverable.mediumpurple.buttu.user(title="click to recieve OTP")#send Continue
         a.waves-effect.waves-light.btn.modal-trigger.user.buttu(title="click to LOGIN")#loginButton12 Existing User?Log in
         //else if(data == 'ifDoctor')
-        a.waves-effect.waves-purple.btn.hoverable.mediumpurple.buttu.doctor(title="click to recieve OTP")#Dsend DContinue
-        a.waves-effect.waves-light.btn.modal-trigger.doctor.buttu(title="click to LOGIN")#D_loginButton D_HP?Log in
+        a.waves-effect.waves-purple.btn.hoverable.mediumpurple.buttu.doctor(title="click to recieve OTP")#Dsend Continue
+        a.waves-effect.waves-light.btn.modal-trigger.doctor.buttu(title="click to LOGIN")#D_loginButton Existing User?Log in
         //else if(data == 'ifPhamacist')
-        a.waves-effect.waves-purple.btn.hoverable.mediumpurple.buttu.pharmacist(title="click to recieve OTP")#Psend PContinue
-        a.waves-effect.waves-light.btn.modal-trigger.pharmacist.buttu(title="click to LOGIN")#P_loginButton P_HP?Log in
+        a.waves-effect.waves-purple.btn.hoverable.mediumpurple.buttu.pharmacist(title="click to recieve OTP")#Psend Continue
+        a.waves-effect.waves-light.btn.modal-trigger.pharmacist.buttu(title="click to LOGIN")#P_loginButton Existing User?Log in
 
             //include ./modalRegister
     //------------------------------------------------after OTP has been sent-----------------------------------------------------------------------------
@@ -35,11 +35,11 @@ div.row.black-text.register#register
             //--------------------------------------------verification of otp--------------------------------------------------------
             a(href="#")
                 //if(data == 'UserRegister')
-                span.right.user.verify(title="verify OTP")#verify UVerify OTP
+                span.right.user.verify(title="verify OTP")#verify Verify OTP
                 //else if(data == 'ifDoctor')
-                span.right.doctor.verify(title="verify OTP")#Dverify DVerify OTP
+                span.right.doctor.verify(title="verify OTP")#Dverify Verify OTP
                 //else if(data == 'ifPhamacist')
-                span.right.pharmacist.verify(title="verify OTP")#Pverify PVerify OTP
+                span.right.pharmacist.verify(title="verify OTP")#Pverify Verify OTP
         div.input-field.col.s12
             input.required(type="password" placeholder="numeric")#password1
             label(for="password1") Password
@@ -52,10 +52,10 @@ div.row.black-text.register#register
 
         div.row.center
             //if(data == 'UserRegister')
-            a.waves-effect.waves-purple.btn.purple.hoverable.darken-2.buttu.user(title="click to register")#submitButton USignup
+            a.waves-effect.waves-purple.btn.purple.hoverable.darken-2.buttu.user(title="click to register")#submitButton Signup
             //else if(data == 'ifDoctor')
-            a.waves-effect.waves-purple.btn.purple.hoverable.darken-2.buttu.doctor(title="click to register")#DsubmitButton DSignup
+            a.waves-effect.waves-purple.btn.purple.hoverable.darken-2.buttu.doctor(title="click to register")#DsubmitButton Signup
             //else if(data == 'ifPhamacist')
-            a.waves-effect.waves-purple.btn.purple.hoverable.darken-2.buttu.pharmacist(title="click to register")#PsubmitButton PSignup
+            a.waves-effect.waves-purple.btn.purple.hoverable.darken-2.buttu.pharmacist(title="click to register")#PsubmitButton Signup
 
 

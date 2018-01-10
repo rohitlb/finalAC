@@ -7,7 +7,7 @@ div.row.login#log
             div.input-field.col.s12
                 input.black-text(type="password")#password2
                 label.required(for="password2") Password
-                a(href="#")
+                a(title="forgot Password")
                     span.right#forgotButton Forgot?
             div.col.s12
                 input(type="checkbox")#check2
@@ -16,11 +16,7 @@ div.row.login#log
                 br
             //---------------------------------------------login button-------------------------------------------------------------------------------------
     div.row.center
-        //if(page == 'UserLogin')
         a.waves-effect.waves-purple.btn.hoverable.mediumpurple.user(title="click to Login" style={width:"80%"})#loginButton1 Login
-        //else if(page == 'LoginHealthCareProvider')
-            a.waves-effect.waves-purple.btn.hoverable.mediumpurple.doctor#DloginButton1(style={width:"80%"}) DPLogin
-        //a.waves-effect.waves-purple.btn.hoverable.mediumpurple.pharmacist#PloginButton1(style={width:"80%"}) Login
         br
         a.waves-effect.waves-purple.hoverable.btn(title="click to register" style={width:"80%"})#NewtoApnicare
             | New to ApniCare?Sign Up

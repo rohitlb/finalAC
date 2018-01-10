@@ -1,13 +1,9 @@
-/*span*/
-/*{*/
-/*position: absolute;*/
-/*right: 0px;*/
-/*color: purple;*/
-/*background-color: white;*/
-/*font-size: 20px;*/
-
-/*}*/
-
+.initial{
+    width: 90px;
+}
+a{
+    cursor: pointer;
+}
 .btn
 {
     background-color: mediumpurple;
@@ -87,11 +83,9 @@ form
 }
 .row
 {
-    /*//background-color: purple;*/
     padding:0px;
     border:0px;
     margin-bottom: 0px;
-    /*//margin:0px;*/
 }
 .input-field
 {

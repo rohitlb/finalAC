@@ -1,0 +1,213 @@
+a.waves-effect.waves-light.btn-flat.right.modal-trigger.initial(href='#modal1')#loginbut Login
+a.waves-effect.waves-light.btn-flat.right.modal-trigger.initial(href='#modal1')#signupbut Signup
+
+#modal1.modal
+    .modal-content(style={padding: "0px",margin:"0px",border:"0"})
+        //div.row
+            a(href='/index')
+                i.modal-action.modal-close.material-icons.right notifications
+
+        div.row
+        a(href="#")
+            //i.modal-action.modal-close.material-icons.right closekiu
+            div.row
+                div.col.l4.hide-on-med-and-down#div1
+                    p
+                        h3.white-text Login
+                        p.black-text.p2
+                        | Get access to your
+                        | account
+                        |
+                    img.image1(src='/images/black.png')
+                div.col.l4.hide-on-med-and-down#div2
+                    p
+                        h3.white-text Signup
+                        p.black-text.p2
+                        | We do not share your
+                        | personal details with
+                        | anyone.
+                    img.image1(src='/images/black.png')
+                div.col.s12.m8.l8
+                    div.row#providers
+                        br
+                        h5.right For HealthCare Provider
+                            //span.btn-flat#Customer BackToUser
+                        a.waves-effect.btn-flat#Customer(title="back to user")
+                            i.material-icons arrow_back
+                    div.row#doctorPhamacist
+                        br
+                        br
+                        div.col.s5.m3.l5.center#imdoctor
+                            br
+                            i.fa.fa-user-md.icon(style="font-size: 50px")
+                            br
+                            a(href='#',title="doctor") Doctor
+                        div.col.s2.m2.l2.center
+                            br
+
+                            h6.black-text OR
+                        div.col.s5.m7.l5.center#impharmacist
+                            br
+                            i.fa.fa-medkit.icon(style="font-size: 50px")
+                            br
+                            a(href="#",title="Pharmacist") Pharmacist
+                        //i.material-icons arrow_back
+                    br
+                    br
+                    form
+                        div.row#closebutton
+                            a(href='/index')
+                                i.modal-action.modal-close.material-icons.right close
+
+
+                        include login
+                        include register
+                        //br
+                        include forgotPassword
+                        br
+                        br
+                        //div#divider
+                            div.row.center
+                                img.image2(src='/images/black.png')
+                                | OR
+                                img.image2(src='/images/black.png')
+                                br
+                                br
+
+                    //div
+                        //.row
+                        //a.waves-effect.waves-purple.btn.btn-large#Customer
+                        //    | User
+                        a.waves-effect.waves-purple.btn.btn-large#healthCare
+                            | HealthCare_Provider
+
+//#modal2.modal
+    .modal-content(style={padding: "0px",margin:"0px",border:"0"})
+        i.material-icons.right close
+        include ./modalRegister
+//a.waves-effect.waves-light.btn-flat.right.modal-trigger(href='#modal1')#loginbut Login
+    - page=UserLogin
+//a.waves-effect.waves-light.btn-flat.right.modal-trigger(href='#modal2')#signupbut Signup
+    - data=UserRegister
+
+//#modal1.modal
+    .modal-content(style={padding: "0px",margin:"0px",border:"0"})
+        a(href="/index")
+            i.modal-action.modal-close.material-icons.right close
+            //include ./modalRegister
+            //---------------------layout of login and register for user------------------
+            if(page == 'UserLogin')
+                div.row
+                    div.col.l4.hide-on-med-and-down.login#div1
+                        p
+                            h3.white-text Login
+                            p.p2.white-text
+                            | Get access to your
+                            | account
+                            |
+                        img.image1(src='/images/black.png')
+                    div.col.s12.m8.l8
+                        div#subpart
+                        div
+                            form
+                                //-----------login---------
+                                include login
+
+
+            else if(page == 'ForgotForUser')
+                div.row
+                    div.col.l4.hide-on-med-and-down.login#div1
+                        p
+                            h3.white-text Login
+                            p.p2.white-text
+                            | Get access to your
+                            | account
+                            |
+                        img.image1(src='/images/black.png')
+                    div.col.s12.m8.l8
+                        form
+                            //----------if user has forgot password-------------------
+                            include forgotPassword
+
+
+
+//#modal2.modal
+    .modal-content(style={padding: "0px",margin:"0px",border:"0"})
+        a(href="/index")
+            i.modal-action.modal-close.material-icons.right close
+            if(data == 'UserRegister')
+                div.row
+                    div.col.l4.hide-on-med-and-down.register#div2
+                        p
+                            h3.white-text Signup
+                            p.p2.black-text
+                            | We do not share your
+                            | personal details with
+                            | anyone.
+                        img.image1(src='/images/black.png')
+                    div.col.s12.m8.l8
+                        form
+                            //---------register-----------
+                            include register
+
+            else if(data == 'RegisterHealthCareProvider')
+                div.row
+                    div.col.l4.hide-on-med-and-down.register#div2
+                        p
+                            h3.white-text Signup
+                            p.p2.black-text
+                            | We do not share your
+                            | personal details with
+                            | anyone.
+                        img.image1(src='/images/black.png')
+                    if(page == 'DoctorOrPharmacist')
+                        div.col.s12.m8.l8
+                            div.row#providers
+                                h6 For HealthCare Provider
+                                    a(href="/")
+                                    span#Customer BackToUser
+                                div.row.left#doctorPhamacist
+                                    br
+                                    br
+                                    div.col.s5.m3.l5.center
+                                        br
+                                        i.fa.fa-user-md#imdoctor(style="font-size: 50px")
+                                        br
+                                        a(href="/ApniCare/login?page=ifDoctor") Doctor
+                                    div.col.s2.m2.l2.center
+                                        br
+
+                                        h6.black-text OR
+                                    div.col.s5.m7.l5.center
+                                        br
+                                        i.fa.fa-medkit#impharmacist(style="font-size: 50px")
+                                        br
+                                        a(href="/ApniCare/login?page=ifPhamacist") Pharmacist
+                                    //i.material-icons arrow_back
+                    else if(data == 'ifDoctor')
+                        div.col.s12.m8.l8
+                            form
+                                //--------------register----------------
+                                include register
+                    else if(data == 'ifPharmacist')
+                        div.col.s12.m8.l8
+                            form
+                                //--------------register----------------
+                                include register
+
+
+            else if(data == 'ForgotForHealthCareProvider ')
+                div.row
+                    div.col.l4.hide-on-med-and-down.login#div1
+                        p
+                            h3.white-text Login
+                            p.p2.white-text
+                            | Get access to your
+                            | account
+                            |
+                        img.image1(src='/images/black.png')
+                    div.col.s12.m8.l8
+                        form
+                            //----------if HealthCareProvider has forgot password-------------------
+                            include forgotPassword
+

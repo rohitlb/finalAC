@@ -60,7 +60,7 @@ app.use(session({
 }));
 
 app.get('/',function (req, res) {
-    res.send('hello there!!');
+    res.render('index');
     res.end();
 });
 
